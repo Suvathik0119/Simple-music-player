@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Music Player</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="player">
+        <h2>Sk Music Player</h2>
+
+        <div class="logo">
+            <img src="./my.jpg">
+        </div>
+        
+        <audio id="audio-player" controls>
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <div class="inputs">
+
+            <button onclick="previous()">|◁</button>
+            <button onclick="play()">▶</button>
+            <button onclick="pause()">▐ ▌</button>
+            <button onclick="stop()">◼</button>
+            <button onclick="next()">▷|</button>
+            <br>
+        </div>
+        <div class="choose">
+            <input type="file" id="file-input" accept="audio/*" multiple>
+            <button onclick="togglePlaylist()">Show Playlist</button>
+        </div>
+
+        
+
+        <div class="list-container" id="playlist-container" style="display: none;">
+            <h3>Playlist</h3>
+            <ul class="list" id="playlist"></ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <footer>
+        <p>Code_with_SK</p>
+    </footer>
+</body>
+</html>
